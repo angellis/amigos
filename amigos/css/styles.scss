@@ -1,0 +1,540 @@
+$pink: #f26c55;
+$cream: #f3e09f;
+$creamlt: #fffbca;
+$orange: #fe9d12;
+$greendk: #81a77e;
+$greendkdk: #378746;
+$greenlt: #91b08c;
+$purpledk: #363370;
+$purple: #6d5484;
+
+$serif: 'Noto Serif', serif;
+
+/*GRID PATTERN FROM https://css-tricks.com/dont-overthink-it-grids/ */
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+$pad: 2%;
+
+.grid {
+  margin: 0;
+  
+  &:after {
+    /* Or @extend clearfix */
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+[class*='col-'] {
+  float: left;
+  padding-right: $pad;
+  //.grid &:last-of-type {
+//    padding-right: 0;
+  //}
+}
+.nopad {
+  padding: 0;    
+}
+.col-1-1 {
+  width: 100%;
+}
+.col-2-3 {
+  width: 100%;
+}
+.col-1-3 {
+  width: 100%;
+}
+.col-1-2 {
+  width: 100%;
+}
+.col-1-4 {
+  width: 100%;
+}
+.col-1-8 {
+  width: 100%;
+}
+.col-1-6 {
+  width: 100%;
+}
+.col-5-6 {
+    width: 100%;
+}
+.col-1-12 {
+    width: 100%
+}
+.col-7-12 {
+    width: 100%;
+}
+.col-11-12 {
+    width: 100%;
+}
+.pad-1-8 {
+    padding: 0 12.5%;
+}
+.col-1-4-mobile-none {
+    width: 0;
+}
+//.padsmall { fixed HTML on index, so may not need
+//    padding: 0 8%;
+//}
+
+/* Opt-in outside padding */
+.grid-pad {
+  padding: $pad 0 $pad $pad;
+  [class*='col-']:last-of-type {
+    padding-right: $pad;
+  }
+}
+.grid-pad-colwide {
+  padding: $pad*3 $pad*4 $pad*3 $pad*4;
+}
+.grid-pad-125 {
+    padding: 0 12.5%;
+}
+
+.padright  {//overrides no padding-right on last-of-type
+    padding-right: $pad*4;
+}
+//END OF GRID PATTERN FROM CSS-TRICKS: DON'T OVERTHINK THE GRID
+body {
+	background-color: #f8d77d;
+	font-size: 100%;
+}
+
+#wrapper{
+	margin: 0 auto;
+	background-color: rgba(255,255,255,.7);
+}
+
+
+header, footer {
+	background-color: $pink;
+    width: 100%;
+    //padding: 1em 0 0;
+}
+
+#header, #footer {
+    position: relative;
+    margin: 0 auto;
+}
+#footer {
+    display: block;
+}
+footer {
+    color: $creamlt;
+	font-family: $serif;
+	font-size: 1em;
+	letter-spacing: .08em;
+    text-align: center;
+    padding: 2em;
+}
+
+.divider {
+    width: 100%;
+    padding-top: .5em;
+}
+
+#skull {
+	display: inline-block;
+    //float: left;
+    position: absolute;
+    //left: 50%;
+	padding: 1em 2em;
+	width: 10em;
+}
+
+
+nav {
+    display: inline-block;
+    float: left;
+    padding-left: 12%;
+    width: 12em;
+    
+    li {
+        display: inline;
+        padding: .7em;
+    }
+    
+    ul {
+        text-align: center;
+        padding: .5em 0 .5em;
+    }
+    
+    ul li a {
+        color: $creamlt;
+        font-family: $serif;
+        //font-weight: 700;
+        text-transform: uppercase;
+        font-size: .9em;
+        letter-spacing: .08em;
+        text-decoration: none;
+    }
+    
+    ul li a:hover{
+        color: #f8d77d;
+    }
+}
+.logo {
+    text-decoration: none;
+}
+
+.logotype1, .logotype2 {
+    font-family: $serif;
+    font-size: 2em;
+    color: $purpledk;
+    text-align: center;
+    
+}
+.logotype1 {
+    font-size: 1.25em;
+    padding-top: 1em;
+}
+.stripes {
+    width: 100%;
+}
+
+.loginnav {
+    padding: 1.7em 0 1.2em;
+    background-color: $greenlt;
+    
+        ul {
+            text-align: center;
+            
+            li {
+                padding: 0 .5em;
+                display: inline-block;
+            }
+            
+            a {
+                color: $creamlt;
+                font-family: $serif;
+                text-transform: uppercase;
+                font-size: .9em;
+                letter-spacing: .02em;
+                text-decoration: none;
+            }
+            a:hover {
+                color: $purpledk;
+            }
+        }
+}
+article {  /*on editing pages*/
+    padding: 0 15% 5%;
+}
+
+.wide {
+    padding: 0 3em 3em;
+}
+
+article p a {
+    text-decoration: none;
+    padding: 0 .3em 0;
+    color: #3faa76;
+}
+main {
+    background-color: $cream;
+}
+.mobilepad {
+    padding: 0 10% 5% 10%;
+}
+p.intro{
+    padding: .5rem 0 1rem;
+    font: .9rem/1.6 $serif;
+}
+.zionpic {
+    background-image: url(../img/zionnp.jpg);
+    background-size: cover;
+    height: 29rem;
+}
+.picmargin {
+    width: 100%;
+}
+
+main ul {
+    text-align: center;
+}
+
+main li {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	font-size: .9em;
+    display: block;
+}
+
+main a {
+    text-decoration: none;
+    color: $purple;
+}
+
+form p label {
+    padding-bottom: .3em;
+    padding-right: .6em;
+    font-style: normal;
+}
+input[type="text"], input[type="password"], textarea, #category {
+    width: 20em;
+    border: none;
+    padding: .8em;
+    margin-top: .5em;
+    background-color: $creamlt;
+}
+
+#category {
+    width: 21.5em;
+    padding: .8em;
+}
+
+input[type="submit"] {
+    width: 22.8em;
+    border: none;
+    padding: 1em;
+    background-color: $pink;
+    color: $creamlt;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+}
+.bgcreamlt {
+	background-color: $cream;
+}
+.bgcream {
+    background-color: $creamlt;
+}
+aside {
+	text-align: center;
+    padding-bottom: 2em !important;
+}
+
+aside a {
+	text-decoration: none;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1em;
+	line-height: 2.5em;
+	color: $purple;
+}
+
+aside a:hover {
+	color: $greendk;
+}
+
+aside a:focus {
+	text-shadow: 0 0 5px $greendk;
+}
+
+section {
+	padding: 0 2em 1em;
+}
+
+.exclamation {
+    display: block;
+    font-family: $serif;
+    font-style: italic;
+    font-size: 2.5rem;
+    line-height: 2.2;
+    color: $greendk;
+    text-align: center;
+}
+
+h2 {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.5em;
+	font-weight: 300;
+	color: #ee2524;
+	text-align: center;
+	padding: 1em;
+}
+
+h3 {
+	font-family: $serif;
+	//font-weight: 700;
+	text-transform: uppercase;
+	font-size: 1.1em;
+	letter-spacing: .07em;
+	padding: 1.7em 1em 1em 0;
+	color: $purple;
+	text-align: center;
+}
+
+dt, h4 {
+	font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    letter-spacing: .05em;
+	text-transform: uppercase;
+	font-size: 1em;
+	color: $greendkdk;
+}
+
+dd, p {
+	font-family: 'Open Sans', sans-serif;
+	font-size: .8em;
+	font-weight: 400;
+	font-style: italic;
+	//letter-spacing: -.02em;
+	line-height: 1.4em;
+	color: #666;
+	padding: .5em 0 1em 1.5em;
+}
+
+.price {
+	font-style: normal;
+}
+
+
+
+
+
+/* "Clearfix hack" code borrowed from http://www.thomasrudy.com/the-css-clearfix-hack-explained/ */
+
+.clearfix:after {
+    content: "";
+    display: table;
+} 
+.clearfix:after {
+    clear: both;
+}
+/* THIS	part of thomasrudy.com code is commented because it doesn't pass validation
+.clearfix {
+    zoom: ; For IE 6/7 (trigger hasLayout)
+}
+*/
+/* End of clearfix code from thomasrudy.com */
+
+
+.imgwide {
+	max-width: 100%;
+	padding: 3% 0;
+/* 	next 3 lines center image horizontally, code from http://www.w3.org/Style/Examples/007/center.en.html#block*/
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@media screen and (min-width: 574px) {  /* TABLET */ 
+
+    nav {
+        padding-left: 20%;
+        width: 20em;
+        
+        ul li a {
+            font-size: 1.1em;
+        }
+    }
+	
+	nav ul {
+		display: block;
+		padding: .5em 0 1.5em;
+	}
+	
+	nav li {
+		display: inline;
+		padding: .5em;
+	}
+    
+    main li {
+        display: block;
+    }
+	
+    .logotype2 {
+       // font-size: 3em;
+    }
+    .logotype1,  .logotype2 {
+        font-size: 2em;
+    }
+    #skull{
+        width: 14em;
+    }
+
+   article {  /*on editing pages*/
+        padding: 0 29% 5%;
+    }
+    .col-1-4-mobile-none {
+        width: 25%;
+    }
+
+}
+@media screen and (min-width: 700px) { /* MEDIA QUERIES */
+    .col-1-1 {
+      width: 100%;
+    }
+    .col-2-3 {
+      width: 66.66%;
+    }
+    .col-1-3 {
+      width: 33.33%;
+    }
+    .col-1-2 {
+      width: 50%;
+    }
+    .col-1-4 {
+      width: 25%;
+    }
+    .col-1-8 {
+      width: 12.5%;
+    }
+    .col-3-4 {
+      width: 75%;
+    }
+    .col-1-6 {
+      width: 16.66%;
+    }
+    .col-5-6 {
+        width: 83.33%;
+    }
+    .col-1-6 {
+      width: 16.66%;
+    }
+    .col-5-6 {
+        width: 83.33%;
+    }
+    .col-1-12 {
+        width: 8.33%
+    }
+  
+    .col-7-12 {
+        width: 58.33%;
+    }
+    .col-11-12 {
+        width: 91.66%;
+    }
+    .pad-1-8 {
+        padding: 0 12.5%;
+    }
+    .mobilepad {
+    padding: 0;
+    }
+}
+
+@media screen and (min-width: 874px) {  /* DESKTOP */
+
+	#wrapper {
+		width: 80%;
+		max-width: 900px;
+		margin-top: 1em;
+		box-shadow: 0 0 .5em #aaa;
+	}
+	
+    nav{
+        width: 29em;
+        padding-left: 30%;
+    }
+	nav ul {
+		display: block;
+		//padding: 2.7em;
+	}
+    
+    article {
+        padding: 0 32% 5%;
+    }
+	
+	nav li {
+		padding: 1.5em .5em;
+	}
+    
+
+}
